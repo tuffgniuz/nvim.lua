@@ -21,7 +21,7 @@ set.fileencoding = 'utf-8'
 set.relativenumber = true
 set.cursorline = true
 set.wildmenu = true
-set.completeopt = 'menu,menuone,noselect'
+set.completeopt = 'menuone,noselect'
 
 set.hidden = true
 set.mouse = "a"
