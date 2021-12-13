@@ -1,3 +1,4 @@
 plugin
 
 .init.vim
+lua/sniprun-config/init.lua

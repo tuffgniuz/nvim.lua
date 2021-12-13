@@ -25,3 +25,5 @@ set.completeopt = 'menuone,noselect'
 
 set.hidden = true
 set.mouse = "a"
+
+vim.notify = require("notify")

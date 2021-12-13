@@ -11,8 +11,14 @@ return require'packer'.startup(function()
     use 'akinsho/toggleterm.nvim'    
     use 'nvim-lua/plenary.nvim'                         
     use 'nvim-telescope/telescope.nvim'                             --> Find, Filter, Preview, Pick. All lua, all the time. 
+    use 'numToStr/Comment.nvim'
+    use 'ggandor/lightspeed.nvim'                                   --> motion plugin with incremental input processing, allowing for unparalleled speed with near-zero cognitive effort 
+    use 'rcarriga/nvim-notify'
+
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }    --> treesitter
     use 'neovim/nvim-lspconfig'                                     --> Collection of configurations for built-in LSP client
+    use 'tami5/lspsaga.nvim'                                        --> icons for LSP diagnostics
+    use 'onsails/lspkind-nvim'                                      --> vscode-like pictograms for neovim lsp completion items 
     use 'hrsh7th/nvim-cmp'                                          --> Autocompletion plugin
     use 'hrsh7th/cmp-nvim-lsp'                                      --> LSP source for nvim-cmp
     use 'saadparwaiz1/cmp_luasnip'                                  --> Snippets source for nvim-cmp
