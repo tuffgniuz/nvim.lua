@@ -6,7 +6,6 @@ return require'packer'.startup(function()
     use 'nvim-lualine/lualine.nvim'                                 --> a statusline written in lua
     use 'romgrk/barbar.nvim'                                        --> tabs for neovim
     use 'kyazdani42/nvim-tree.lua'                                  --> file explorer
-    use 'windwp/nvim-autopairs'                                     --> autopairs for neovim written in lua
     use 'lukas-reineke/indent-blankline.nvim'                       --> indent guides for neovim
     use 'akinsho/toggleterm.nvim'    
     use 'nvim-lua/plenary.nvim'                         
@@ -14,8 +13,14 @@ return require'packer'.startup(function()
     use 'numToStr/Comment.nvim'
     use 'ggandor/lightspeed.nvim'                                   --> motion plugin with incremental input processing, allowing for unparalleled speed with near-zero cognitive effort 
     use 'rcarriga/nvim-notify'
+    use 'windwp/nvim-autopairs'
+    use 'sunjon/shade.nvim'                                         --> dim inactive windows
 
+    -- treesitter & treesitter modules/plugins
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }    --> treesitter
+    use 'nvim-treesitter/nvim-treesitter-textobjects'               --> textobjects
+
+    -- lsp
     use 'neovim/nvim-lspconfig'                                     --> Collection of configurations for built-in LSP client
     use 'tami5/lspsaga.nvim'                                        --> icons for LSP diagnostics
     use 'onsails/lspkind-nvim'                                      --> vscode-like pictograms for neovim lsp completion items 
