@@ -16,6 +16,9 @@ return require'packer'.startup(function()
     use 'windwp/nvim-autopairs'
     use 'sunjon/shade.nvim'                                         --> dim inactive windows
 
+    -- writing
+    use 'nvim-neorg/neorg'
+
     -- treesitter & treesitter modules/plugins
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }    --> treesitter
     use 'nvim-treesitter/nvim-treesitter-textobjects'               --> textobjects
