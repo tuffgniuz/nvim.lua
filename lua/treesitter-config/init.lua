@@ -106,5 +106,20 @@ require'nvim-treesitter.configs'.setup {
             goto_node = '<cr>',
             show_help = '?',
         },
+    },
+    --> refactor module
+    refactor = {
+        smart_rename = {
+            enable = true,
+            keymaps = {
+            smart_rename = "grr",
+            },
+        },
+    },
+    --> rainbow tags
+    rainbow = {
+        enable = true,
+        extended_mode = true,
+        max_file_lines = nil,
     }
 }

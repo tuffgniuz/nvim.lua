@@ -22,6 +22,8 @@ return require'packer'.startup(function()
     -- treesitter & treesitter modules/plugins
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }    --> treesitter
     use 'nvim-treesitter/nvim-treesitter-textobjects'               --> textobjects
+    use 'nvim-treesitter/nvim-treesitter-refactor'
+    use 'p00f/nvim-ts-rainbow'
     use 'nvim-treesitter/playground'
 
     -- lsp
