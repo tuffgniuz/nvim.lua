@@ -22,6 +22,7 @@ return require'packer'.startup(function()
     -- treesitter & treesitter modules/plugins
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }    --> treesitter
     use 'nvim-treesitter/nvim-treesitter-textobjects'               --> textobjects
+    use 'nvim-treesitter/playground'
 
     -- lsp
     use 'neovim/nvim-lspconfig'                                     --> Collection of configurations for built-in LSP client
