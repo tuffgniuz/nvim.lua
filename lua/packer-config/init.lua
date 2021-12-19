@@ -2,7 +2,6 @@ return require'packer'.startup(function()
     use 'wbthomason/packer.nvim'                                    --> packer plugin manager
     use 'kyazdani42/nvim-web-devicons'                              --> enable icons
     use 'norcalli/nvim-colorizer.lua'
-    use 'EdenEast/nightfox.nvim'                                    --> nightfox colorsceme for neovim
     use 'nvim-lualine/lualine.nvim'                                 --> a statusline written in lua
     use 'romgrk/barbar.nvim'                                        --> tabs for neovim
     use 'kyazdani42/nvim-tree.lua'                                  --> file explorer
@@ -15,6 +14,11 @@ return require'packer'.startup(function()
     use 'rcarriga/nvim-notify'
     use 'windwp/nvim-autopairs'
     use 'sunjon/shade.nvim'                                         --> dim inactive windows
+    use 'Pocco81/TrueZen.nvim'
+
+    --> colorschemes
+    use 'EdenEast/nightfox.nvim'                                    --> nightfox colorsceme for neovim
+    use 'sainnhe/gruvbox-material'
 
     -- writing
     use 'nvim-neorg/neorg'

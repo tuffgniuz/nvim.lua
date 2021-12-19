@@ -15,4 +15,3 @@ require'shade-config'
 require'lsp-config.servers'
 require'lsp-config.lspsaga'
 require'lsp-config.completion'
-

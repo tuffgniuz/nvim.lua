@@ -28,6 +28,8 @@ parser_configs.norg_table = {
 require'nvim-treesitter.configs'.setup {
     --> parsers <--
     ensure_installed = {
+        'c',
+        'css',
         'python',
         'bash',
         'fish',
@@ -112,13 +114,13 @@ require'nvim-treesitter.configs'.setup {
         smart_rename = {
             enable = true,
             keymaps = {
-            smart_rename = "grr",
+                smart_rename = "grr",
             },
         },
     },
     --> rainbow tags
     rainbow = {
-        enable = true,
+        enable = false,
         extended_mode = true,
         max_file_lines = nil,
     }
