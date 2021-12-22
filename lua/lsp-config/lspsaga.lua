@@ -1,6 +1,4 @@
-local lspsaga = require 'lspsaga'
-
-lspsaga.setup { 
+require'lspsaga'.setup {
     debug = false,
     use_saga_diagnostic_sign = true,
     -- diagnostic sign

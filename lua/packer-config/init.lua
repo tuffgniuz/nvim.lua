@@ -32,6 +32,8 @@ return require'packer'.startup(function()
 
     -- lsp
     use 'neovim/nvim-lspconfig'                                     --> Collection of configurations for built-in LSP client
+    use 'williamboman/nvim-lsp-installer'                           --> Companion plugin for lsp-config, allows us to seamlesly install language servers
+    use 'jose-elias-alvarez/null-ls.nvim'
     use 'tami5/lspsaga.nvim'                                        --> icons for LSP diagnostics
     use 'onsails/lspkind-nvim'                                      --> vscode-like pictograms for neovim lsp completion items 
     use 'hrsh7th/nvim-cmp'                                          --> Autocompletion plugin
