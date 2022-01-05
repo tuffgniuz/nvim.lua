@@ -32,7 +32,12 @@ local servers = {
 	"emmet_ls",
 	"sumneko_lua",
 	"ltex",
+	"eslint",
 }
+
+---@diagnostic disable-next-line: undefined-global
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
 for _, name in pairs(servers) do
 	local server_is_found, server = lsp_installer.get_server(name)
@@ -48,6 +53,7 @@ lsp_installer.on_server_ready(function(server)
 	-- Specify the default options which we'll use to setup all servers
 	local default_opts = {
 		on_attach = on_attach,
+		capabilities = capabilities,
 	}
 
 	server:setup(default_opts)
