@@ -27,12 +27,12 @@ end
 
 local servers = {
 	"bashls",
-	"pyright",
-	"tsserver",
+	"cssls",
 	"emmet_ls",
-	"sumneko_lua",
 	"ltex",
-	"eslint",
+	"sumneko_lua",
+	"tsserver",
+	"pyright",
 }
 
 ---@diagnostic disable-next-line: undefined-global

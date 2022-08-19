@@ -7,6 +7,8 @@ local sources = {
 	formatting.autopep8,
 	formatting.stylua,
 	formatting.clang_format,
+	-- formatting.prettier,
+	-- formatting.latexindent,
 }
 
 null_ls.setup({
@@ -14,7 +16,7 @@ null_ls.setup({
 
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then
-			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting()")
 		end
 	end,
 })

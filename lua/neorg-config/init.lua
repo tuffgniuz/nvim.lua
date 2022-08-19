@@ -1,24 +1,27 @@
 require("neorg").setup({
-	-- Tell Neorg what modules to load
 	load = {
 		["core.defaults"] = {}, -- Load all the default modules
 		["core.keybinds"] = {
 			config = {
 				default_keybinds = true,
-				neorg_leader = "<Leader>o",
 			},
 		},
 		["core.norg.concealer"] = {
 			config = {
 				markup = {
-					enabled = false,
+					enable = false,
 				},
 			},
-		}, -- Allows for use of icons
-		["core.norg.dirman"] = { -- Manage your directories with Neorg
+		},
+		["core.norg.qol.toc"] = {},
+		["core.norg.dirman"] = {
 			config = {
 				workspaces = {
-					math = "~/Documents/Notes/Math",
+					dev = "~/Neorg/Notes/dev",
+					jwl = "~/Neorg/Notes/jwl",
+					yt = "~/Neorg/youtube",
+					thesis = "~/Neorg/Notes/thesis",
+					gtd = "~/Neorg/GTD",
 				},
 				autodetect = true,
 				autochdir = true,
@@ -27,6 +30,12 @@ require("neorg").setup({
 		["core.norg.completion"] = {
 			config = {
 				engine = "nvim-cmp",
+			},
+		},
+		--> generates a table of content from the neorg file
+		["core.gtd.base"] = {
+			config = {
+				workspace = "gtd",
 			},
 		},
 	},

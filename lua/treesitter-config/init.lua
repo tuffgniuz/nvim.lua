@@ -1,4 +1,3 @@
---> Neorg parser configs <--
 local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
 
 parser_configs.norg = {
@@ -30,15 +29,11 @@ require("nvim-treesitter.configs").setup({
 	ensure_installed = {
 		"c",
 		"css",
-		"python",
 		"bash",
 		"fish",
 		"javascript",
 		"lua",
 		"typescript",
-		"norg",
-		"norg_meta",
-		"norg_table",
 	},
 	sync_install = false,
 	highlight = {

@@ -1,7 +1,5 @@
 local set = vim.opt
 
--- set.shell = "/bin/sh"
-
 set.expandtab = true
 set.smarttab = true
 set.shiftwidth = 4
@@ -30,4 +28,24 @@ set.completeopt = "menuone,noselect"
 set.hidden = true
 set.mouse = "a"
 
+set.fillchars = "eob: "
+
+vim.cmd([[
+    colorscheme gruvbox-material
+]])
+
+vim.g.gruvbox_material_enable_italic = 1
+
 vim.notify = require("notify")
+
+-- vimtex config
+vim.g.vimtex_view_method = "zathura"
+
+-- vim.g.goyo_height = 90
+
+--> LanguageTool configs
+-- vim.cmd([[
+--     autocmd User LanguageToolCheckDone LanguageToolSummary
+--     autocmd Filetype tex LanguageToolSetUp
+--     autocmd Filetype norg LanguageToolSetUp
+-- ]])

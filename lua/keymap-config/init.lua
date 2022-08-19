@@ -3,6 +3,7 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " " -- leader key
 
+--> Goyo <--
 --> nvim tree mappings <--
 map("n", "<leader>t", ":NvimTreeToggle<CR>", opts)
 map("n", "<leader>gt", ":NvimTreeFocus<CR>", opts)
@@ -30,8 +31,3 @@ map("n", "<C-p>", ":BufferPick<CR>", opts)
 map("n", "<leader>bb", ":BufferOrderByBufferNumber<CR>", opts)
 map("n", "<leader>bd", ":BufferOrderByDirectory<CR>", opts)
 map("n", "<leader>bl", ":BufferOrderByLanguage<CR>", opts)
---> TrueZen mappings <--
-map("n", "<leader>za", ":TZAtaraxis<CR>", opts)
---> nabla
-map("n", "<C-r>", ':lua require("nabla").action()<CR>', opts)
-map("n", "<C-p>", ':lua require("nabla").popup()<CR>', opts)
