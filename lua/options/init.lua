@@ -30,18 +30,16 @@ set.mouse = "a"
 
 set.fillchars = "eob: "
 
-vim.cmd([[
-    colorscheme gruvbox-material
-]])
+vim.cmd("colorscheme nordfox")
 
-vim.g.gruvbox_material_enable_italic = 1
+-- vim.cmd([[
+--     colorscheme gruvbox-material
+--     ]] ) ]]
+-- vim.g.gruvbox_material_enable_italic = 1
 
-vim.notify = require("notify")
-
--- vimtex config
 vim.g.vimtex_view_method = "zathura"
 
--- vim.g.goyo_height = 90
+vim.notify = require("notify")
 
 --> LanguageTool configs
 -- vim.cmd([[

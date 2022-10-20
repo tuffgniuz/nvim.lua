@@ -1,9 +1,9 @@
 require("Comment").setup({
 	ignore = "^$",
 
-	mappings = {
-		extended = true,
-	},
+	--[[ mappings = { ]]
+	--[[ 	extended = true, ]]
+	--[[ }, ]]
 
 	pre_hook = function(ctx)
 		-- dasnjknas

@@ -37,7 +37,7 @@ local servers = {
 
 ---@diagnostic disable-next-line: undefined-global
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 for _, name in pairs(servers) do
 	local server_is_found, server = lsp_installer.get_server(name)

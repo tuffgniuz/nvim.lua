@@ -3,7 +3,9 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " " -- leader key
 
---> Goyo <--
+--> truezen <--
+map("n", "<leader>za", ":TZAtaraxis<CR>", {})
+map("n", "<leader>zm", ":TZMinimalist<CR>", {})
 --> nvim tree mappings <--
 map("n", "<leader>t", ":NvimTreeToggle<CR>", opts)
 map("n", "<leader>gt", ":NvimTreeFocus<CR>", opts)

@@ -1,7 +1,5 @@
 return require("packer").startup(function()
 	use("wbthomason/packer.nvim") --> packer plugin manager
-
-	-->
 	use("Pocco81/TrueZen.nvim")
 	use("kyazdani42/nvim-web-devicons") --> enable icons
 	use("norcalli/nvim-colorizer.lua")
