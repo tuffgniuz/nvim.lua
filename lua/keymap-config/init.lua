@@ -7,8 +7,8 @@ vim.g.mapleader = " " -- leader key
 map("n", "<leader>za", ":TZAtaraxis<CR>", {})
 map("n", "<leader>zm", ":TZMinimalist<CR>", {})
 --> nvim tree mappings <--
-map("n", "<leader>t", ":NvimTreeToggle<CR>", opts)
-map("n", "<leader>gt", ":NvimTreeFocus<CR>", opts)
+map("n", "<leader>n", ":NvimTreeToggle<CR>", opts)
+map("n", "<leader>gn", ":NvimTreeFocus<CR>", opts)
 --> telescope mappings <--
 map("n", "<leader>ff", ":Telescope find_files<cr>", opts)
 map("n", "<leader>fg", ":Telescope live_grep<cr>", opts)

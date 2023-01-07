@@ -32,18 +32,6 @@ set.fillchars = "eob: "
 
 vim.cmd("colorscheme nordfox")
 
--- vim.cmd([[
---     colorscheme gruvbox-material
---     ]] ) ]]
--- vim.g.gruvbox_material_enable_italic = 1
-
 vim.g.vimtex_view_method = "zathura"
 
 vim.notify = require("notify")
-
---> LanguageTool configs
--- vim.cmd([[
---     autocmd User LanguageToolCheckDone LanguageToolSummary
---     autocmd Filetype tex LanguageToolSetUp
---     autocmd Filetype norg LanguageToolSetUp
--- ]])

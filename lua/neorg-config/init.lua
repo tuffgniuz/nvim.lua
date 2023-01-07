@@ -1,34 +1,36 @@
 require("neorg").setup({
 	load = {
-		["core.defaults"] = {}, -- Load all the default modules
+		["core.defaults"] = {},
 		["core.keybinds"] = {},
 		["core.norg.concealer"] = {},
-		--[[ ["core.presenter"] = {}, ]]
-		--[[ 	config = { ]]
-		--[[ 		markup = { ]]
-		--[[ 			enable = false, ]]
-		--[[ 		}, ]]
-		--[[ 	}, ]]
-		--[[ }, ]]
-		--[[ ["core.norg.qol.toc"] = {}, ]]
+		["core.presenter"] = {
+			config = {
+				zen_mode = "truezen",
+			},
+		},
+		["core.export"] = {},
 		["core.norg.dirman"] = {
 			config = {
 				workspaces = {
-					dev = "~/.neorg/notes/dev",
-					yt = "~/.neorg/notes/youtube",
-					gtd = "~/.neorg/gtd",
+					dev = "~/Neorg/Dev",
+					yt = "~/Neorg/YouTube",
+					general = "~/Neorg/General",
+					work = "~/Neorg/Work",
+					gtd = "~/Neorg/GTD",
 				},
 				autodetect = true,
 				autochdir = true,
 			},
 		},
-		["core.integrations.nvim-cmp"] = {},
-		--[[ ["core.norg.completion"] = {}, ]]
-		--> generates a table of content from the neorg file
-		--[[ ["core.gtd.base"] = { ]]
-		--[[ 	config = { ]]
-		--[[ 		workspace = "gtd", ]]
-		--[[ 	}, ]]
-		--[[ }, ]]
+		["core.norg.completion"] = {
+			config = {
+				engine = "nvim-cmp",
+			},
+		},
+		["core.gtd.base"] = {
+			config = {
+				workspace = "gtd",
+			},
+		},
 	},
 })
