@@ -52,16 +52,6 @@ require("lspconfig")["sumneko_lua"].setup({
 	capabilities = capabilities,
 })
 
-require("lspconfig")["texlab"].setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
-require("lspconfig")["ltex"].setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
 require("lspconfig")["bashls"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
