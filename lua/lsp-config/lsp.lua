@@ -71,3 +71,8 @@ require("lspconfig")["hls"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
+
+require("lspconfig")["clangd"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})

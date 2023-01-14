@@ -28,6 +28,7 @@ require("nvim-treesitter.configs").setup({
 	--> parsers <--
 	ensure_installed = {
 		"c",
+		"cpp",
 		"css",
 		"bash",
 		"fish",
@@ -118,7 +119,7 @@ require("nvim-treesitter.configs").setup({
 	},
 	--> rainbow tags
 	rainbow = {
-		enable = false,
+		enable = true,
 		extended_mode = true,
 		max_file_lines = nil,
 	},
