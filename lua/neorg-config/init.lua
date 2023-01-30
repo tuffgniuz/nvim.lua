@@ -27,10 +27,10 @@ require("neorg").setup({
 				engine = "nvim-cmp",
 			},
 		},
-		["core.gtd.base"] = {
-			config = {
-				workspace = "gtd",
-			},
-		},
+		--[[ ["core.gtd.base"] = { ]]
+		--[[ 	config = { ]]
+		--[[ 		workspace = "gtd", ]]
+		--[[ 	}, ]]
+		--[[ }, ]]
 	},
 })
