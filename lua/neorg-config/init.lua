@@ -12,11 +12,10 @@ require("neorg").setup({
 		["core.norg.dirman"] = {
 			config = {
 				workspaces = {
-					dev = "~/Neorg/Dev",
-					yt = "~/Neorg/YouTube",
-					general = "~/Neorg/General",
-					work = "~/Neorg/Work",
-					gtd = "~/Neorg/GTD",
+					--[[ dev = "~/norg/dev", ]]
+					--[[ yt = "~/norg/youtube", ]]
+					--[[ general = "~/norg/general", ]]
+					work = "~/norg/work",
 				},
 				autodetect = true,
 				autochdir = true,
@@ -27,10 +26,10 @@ require("neorg").setup({
 				engine = "nvim-cmp",
 			},
 		},
-		["core.gtd.base"] = {
-			config = {
-				workspace = "gtd",
-			},
-		},
+		--[[ ["core.gtd.base"] = { ]]
+		--[[ 	config = { ]]
+		--[[ 		workspace = "gtd", ]]
+		--[[ 	}, ]]
+		--[[ }, ]]
 	},
 })

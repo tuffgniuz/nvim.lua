@@ -3,6 +3,9 @@ require("nvim-tree").setup({
 	diagnostics = {
 		enable = true,
 	},
+    filters = {
+        dotfiles = true,
+    }
 	--[[ view = { ]]
 	--[[ 	auto_resize = true, ]]
 	--[[ }, ]]

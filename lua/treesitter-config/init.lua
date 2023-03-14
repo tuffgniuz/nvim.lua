@@ -30,7 +30,7 @@ require("nvim-treesitter.configs").setup({
 		"c",
 		"cpp",
 		"css",
-		"bash",
+		--[[ "bash", ]]
 		"fish",
 		"javascript",
 		"lua",

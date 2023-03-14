@@ -1,18 +1,35 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-vim.g.mapleader = " " -- leader key
+vim.g.mapleader = " "
 
 --> truezen <--
 map("n", "<leader>za", ":TZAtaraxis<CR>", {})
 map("n", "<leader>zm", ":TZMinimalist<CR>", {})
+
 --> nvim tree mappings <--
-map("n", "<leader>n", ":NvimTreeToggle<CR>", opts)
-map("n", "<leader>gn", ":NvimTreeFocus<CR>", opts)
+map("n", "<leader>t", ":NvimTreeToggle<CR>", opts)
+map("n", "<leader>gt", ":NvimTreeFocus<CR>", opts)
+map("n", "<leader>it", ":NvimTreeResize +5<CR>", opts)
+map("n", "<leader>dt", ":NvimTreeResize -5<CR>", opts)
+
+--> gitsigns <--
+map("n", "]h", ":Gitsigns next_hunk<CR>", opts)
+map("n", "[h", ":Gitsigns prev_hunk<CR>", opts)
+--> neogit <--
+map("n", "ng", ":Neogit<CR>", opts)
+--> diffview <--
+map("n", "dvo", ":DiffviewOpen<cr>", opts)
+map("n", "dvc", ":DiffviewClose<cr>", opts)
+
 --> telescope mappings <--
-map("n", "<leader>ff", ":Telescope find_files<cr>", opts)
-map("n", "<leader>fg", ":Telescope live_grep<cr>", opts)
-map("n", "<leader>fb", ":Telescope buffers<cr>", opts)
+map("n", "<leader>ff", ":Telescope find_files theme=dropdown<cr>", opts)
+map("n", "<leader>fg", ":Telescope live_grep theme=dropdown<cr>", opts)
+
+--[[ map("n", "<leader>fb", ":Telescope buffers theme=dropdown<cr>", opts) ]]
+map("n", "<leader>fr", ":Telescope lsp_references theme=dropdown<cr>", opts)
+map("n", "<leader>fb", ":Telescope file_browser<cr>", opts)
+
 --> barbar mappings <--
 map("n", "<A-,>", ":BufferPrevious<CR>", opts)
 map("n", "<A-.>", ":BufferNext<CR>", opts)
