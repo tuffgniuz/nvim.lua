@@ -10,14 +10,15 @@ return require("packer").startup(function()
 	use("akinsho/toggleterm.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim") --> Find, Filter, Preview, Pick. All lua, all the time.
+	use("lpoto/telescope-docker.nvim") --> Find, Filter, Preview, Pick. All lua, all the time.
 	use("numToStr/Comment.nvim")
 	use("ggandor/lightspeed.nvim") --> motion plugin with incremental input processing, allowing for unparalleled speed with near-zero cognitive effort
 	use("rcarriga/nvim-notify")
 	use("windwp/nvim-autopairs")
 	use("fladson/vim-kitty") --> kitty syntax highlighting
 	use("startup-nvim/startup.nvim")
-	use("lervag/vimtex")
-	use("mfussenegger/nvim-dap")
+	use("TimUntersberger/neogit")
+	use("sindrets/diffview.nvim")
 	--> colorschemes
 	use("EdenEast/nightfox.nvim") --> nightfox colorsceme for neovim
 	use("sainnhe/gruvbox-material")

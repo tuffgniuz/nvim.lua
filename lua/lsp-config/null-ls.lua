@@ -9,16 +9,16 @@ local sources = {
 	formatting.eslint_d,
 	formatting.autopep8,
 	formatting.stylua,
-	formatting.clang_format,
 	formatting.stylelint,
 	formatting.prettier,
-	formatting.phpcbf,
 
 	--[[ code actions ]]
 	code_actions.eslint_d,
+	code_actions.refactoring,
 
 	--[[ diagnostics ]]
 	diagnostics.eslint_d,
+	diagnostics.flake8,
 }
 
 local lsp_formatting = function(bufnr)

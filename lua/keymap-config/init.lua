@@ -3,6 +3,12 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " " -- leader key
 
+--> neogit <--
+map("n", "ng", ":Neogit<CR>", {})
+--> diffview <--
+map("n", "<leader>do", ":DiffviewOpen<CR>", {})
+map("n", "<leader>dc", ":DiffviewClose<CR>", {})
+map("n", "<leader>dt", ":DiffviewToggleFiles<CR>", {})
 --> truezen <--
 map("n", "<leader>za", ":TZAtaraxis<CR>", {})
 map("n", "<leader>zm", ":TZMinimalist<CR>", {})
@@ -10,7 +16,10 @@ map("n", "<leader>zm", ":TZMinimalist<CR>", {})
 map("n", "<leader>n", ":NvimTreeToggle<CR>", opts)
 map("n", "<leader>gn", ":NvimTreeFocus<CR>", opts)
 --> telescope mappings <--
+map("n", "<leader>ld", ":Telescope diagnostics<cr>", opts)
 map("n", "<leader>ff", ":Telescope find_files<cr>", opts)
+map("n", "<leader>fr", ":Telescope lsp_references<cr>", opts)
+map("n", "<leader>oc", ":Telescope lsp_outgoing_calls<cr>", opts)
 map("n", "<leader>fg", ":Telescope live_grep<cr>", opts)
 map("n", "<leader>fb", ":Telescope buffers<cr>", opts)
 --> barbar mappings <--

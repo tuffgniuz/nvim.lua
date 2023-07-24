@@ -11,7 +11,7 @@ local on_attach = function(client, bufnr)
 	local opts = { noremap = true, silent = true }
 
 	buf_set_keymap("n", "gd", ":lua vim.lsp.buf.definition()<CR>", opts) --> jumps to the definition of the symbol under the cursor
-	buf_set_keymap("n", "<leader>lh", ":lua vim.lsp.buf.hover()<CR>", opts) --> information about the symbol under the cursos in a floating window
+	buf_set_keymap("n", "H", ":lua vim.lsp.buf.hover()<CR>", opts) --> information about the symbol under the cursos in a floating window
 	buf_set_keymap("n", "gi", ":lua vim.lsp.buf.implementation()<CR>", opts) --> lists all the implementations for the symbol under the cursor in the quickfix window
 	buf_set_keymap("n", "<leader>rn", ":lua vim.lsp.util.rename()<CR>", opts) --> renaname old_fname to new_fname
 	buf_set_keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts) --> selects a code action available at the current cursor position
@@ -47,20 +47,10 @@ require("lspconfig")["tsserver"].setup({
 	capabilities = capabilities,
 })
 
-require("lspconfig")["sumneko_lua"].setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
-require("lspconfig")["texlab"].setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
-require("lspconfig")["ltex"].setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
+--[[ require("lspconfig")["lsp_lua"].setup({ ]]
+--[[ 	on_attach = on_attach, ]]
+--[[ 	capabilities = capabilities, ]]
+--[[ }) ]]
 
 require("lspconfig")["bashls"].setup({
 	on_attach = on_attach,
@@ -68,16 +58,6 @@ require("lspconfig")["bashls"].setup({
 })
 
 require("lspconfig")["hls"].setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
-require("lspconfig")["clangd"].setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
-require("lspconfig")["gopls"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })

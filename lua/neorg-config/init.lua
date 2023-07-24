@@ -2,27 +2,25 @@ require("neorg").setup({
 	load = {
 		["core.defaults"] = {},
 		["core.keybinds"] = {},
-		["core.norg.concealer"] = {},
+		["core.concealer"] = {},
 		["core.presenter"] = {
 			config = {
 				zen_mode = "truezen",
 			},
 		},
 		["core.export"] = {},
-		["core.norg.dirman"] = {
+		["core.dirman"] = {
 			config = {
 				workspaces = {
 					dev = "~/Neorg/Dev",
+					devjutsu = "Neorg/devjutsu",
 					yt = "~/Neorg/YouTube",
-					general = "~/Neorg/General",
-					work = "~/Neorg/Work",
-					gtd = "~/Neorg/GTD",
 				},
 				autodetect = true,
 				autochdir = true,
 			},
 		},
-		["core.norg.completion"] = {
+		["core.completion"] = {
 			config = {
 				engine = "nvim-cmp",
 			},
