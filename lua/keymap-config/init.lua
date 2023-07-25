@@ -16,7 +16,7 @@ map("n", "<leader>zm", ":TZMinimalist<CR>", {})
 map("n", "<leader>n", ":NvimTreeToggle<CR>", opts)
 map("n", "<leader>gn", ":NvimTreeFocus<CR>", opts)
 --> telescope mappings <--
-map("n", "<leader>ld", ":Telescope diagnostics<cr>", opts)
+map("n", "<leader>fd", ":Telescope diagnostics<cr>", opts)
 map("n", "<leader>ff", ":Telescope find_files<cr>", opts)
 map("n", "<leader>fr", ":Telescope lsp_references<cr>", opts)
 map("n", "<leader>oc", ":Telescope lsp_outgoing_calls<cr>", opts)
