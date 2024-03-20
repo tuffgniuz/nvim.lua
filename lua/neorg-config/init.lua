@@ -12,9 +12,8 @@ require("neorg").setup({
 		["core.dirman"] = {
 			config = {
 				workspaces = {
-					dev = "~/Neorg/Dev",
+					dev = "~/Neorg/dev",
 					devjutsu = "Neorg/devjutsu",
-					yt = "~/Neorg/YouTube",
 				},
 				autodetect = true,
 				autochdir = true,

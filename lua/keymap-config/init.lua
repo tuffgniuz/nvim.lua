@@ -3,6 +3,8 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " " -- leader key
 
+--> oil
+map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 --> neogit <--
 map("n", "ng", ":Neogit<CR>", {})
 --> diffview <--

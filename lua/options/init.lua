@@ -1,37 +1,32 @@
-local set = vim.opt
+vim.opt.expandtab = true
+vim.opt.smarttab = true
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 
-set.expandtab = true
-set.smarttab = true
-set.shiftwidth = 2
-set.tabstop = 2
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
-set.hlsearch = true
-set.incsearch = true
-set.ignorecase = true
-set.smartcase = true
+vim.opt.termguicolors = true
+vim.opt.showmode = false
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.wrap = false
+vim.opt.breakindent = true
+vim.opt.scrolloff = 5
+vim.opt.fileencoding = "utf-8"
+vim.opt.conceallevel = 2
 
-set.termguicolors = true
-set.showmode = false
-set.splitbelow = true
-set.splitright = true
-set.wrap = false
-set.breakindent = true
-set.scrolloff = 5
-set.fileencoding = "utf-8"
-set.conceallevel = 2
+vim.opt.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.wildmenu = true
+vim.opt.completeopt = "menuone,noselect"
 
-set.relativenumber = true
-set.cursorline = true
-set.wildmenu = true
-set.completeopt = "menuone,noselect"
+vim.opt.hidden = true
+vim.opt.mouse = "a"
 
-set.hidden = true
-set.mouse = "a"
+vim.opt.fillchars = "eob: "
 
-set.fillchars = "eob: "
+vim.cmd("colorscheme nordic")
 
-vim.cmd("colorscheme nordfox")
-
-vim.g.vimtex_view_method = "zathura"
-
-vim.notify = require("notify")

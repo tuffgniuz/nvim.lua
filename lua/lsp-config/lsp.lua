@@ -47,10 +47,25 @@ require("lspconfig")["tsserver"].setup({
 	capabilities = capabilities,
 })
 
---[[ require("lspconfig")["lsp_lua"].setup({ ]]
---[[ 	on_attach = on_attach, ]]
---[[ 	capabilities = capabilities, ]]
---[[ }) ]]
+require("lspconfig")["lua_ls"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["tailwindcss"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["svelte"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig")["prismals"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
 
 require("lspconfig")["bashls"].setup({
 	on_attach = on_attach,
