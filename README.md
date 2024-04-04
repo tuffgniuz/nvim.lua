@@ -2,9 +2,7 @@
 <img src="res/neovim.svg" />
 
 # Neovim Rocks
-</div>
 
-<div align="center">
 ## Summary
 </div>
 
