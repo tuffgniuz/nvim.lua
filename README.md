@@ -11,6 +11,8 @@
 
 My personal Neovim setup, optimized for development productivity and powered by rocks.nvim for seamless plugin management. Currently requires neovim nightly to support [rocks.nvim](https://github.com/nvim-neorocks/rocks.nvim)
 
+<img src="res/neovim-screenshot.png" />
+
 ### Plugins
 
 - [rocks.nvim](https://github.com/nvim-neorocks/rocks.nvim)
