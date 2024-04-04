@@ -32,6 +32,12 @@ require("lspconfig")["pyright"].setup({
 	capabilities = capabilities,
 })
 
+require("lspconfig")["gopls"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+
 require("lspconfig")["cssls"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
@@ -58,11 +64,6 @@ require("lspconfig")["tailwindcss"].setup({
 })
 
 require("lspconfig")["svelte"].setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
-require("lspconfig")["prismals"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
