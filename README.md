@@ -1,16 +1,16 @@
 <div align="center">
-    <img src="res/neovim.svg" />
+<img src="res/neovim.svg" />
 
-    # Neovim Rocks
+# Neovim Rocks
 </div>
 
 <div align="center">
-    # Summary
+## Summary
 </div>
 
 My personal Neovim setup, optimized for development productivity and powered by rocks.nvim for seamless plugin management. Currently requires neovim nightly to support [rocks.nvim](https://github.com/nvim-neorocks/rocks.nvim)
 
-## Plugins
+### Plugins
 
 - [rocks.nvim](https://github.com/nvim-neorocks/rocks.nvim)
 - [rocks-config.nvim](https://github.com/nvim-neorocks/rocks-config.nvim)
