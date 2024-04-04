@@ -11,7 +11,9 @@
 
 My personal Neovim setup, optimized for development productivity and powered by rocks.nvim for seamless plugin management. Currently requires neovim nightly to support [rocks.nvim](https://github.com/nvim-neorocks/rocks.nvim)
 
-<img src="res/neovim-screenshot.png" />
+### Installation
+
+Ensure you have the neovim nightly installed if you decide to fork my config because as of writing, [rocks.nvim](https://github.com/nvim-neorocks/rocks.nvim) requires a `Neovim` nightly (>= 0.10) installation. You can read their documentation for more **requirements**. You will also need to install `rocks.nvim`.
 
 ### Plugins
 
