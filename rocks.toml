@@ -43,6 +43,9 @@ rev = "v1.3^{}"
 [plugins."lsp-zero.nvim"]
 git = "VonHeikemen/lsp-zero.nvim"
 
+[plugins."leap.nvim"]
+git = "ggandor/leap.nvim"
+
 [config]
 plugins_dir = "plugins/"
 auto_setup = false
