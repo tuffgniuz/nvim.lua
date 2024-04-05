@@ -13,7 +13,7 @@ My personal Neovim setup, optimized for development productivity and powered by 
 
 ### Installation
 
-Ensure you have the neovim nightly installed if you decide to fork my config because as of writing, [rocks.nvim](https://github.com/nvim-neorocks/rocks.nvim) requires a `Neovim` nightly (>= 0.10) installation. You can read their documentation for more **requirements**. You will also need to install `rocks.nvim`.
+To use my Neovim configuration, it is crucial to have the Neovim nightly version installed, particularly version 0.10 or later, because my setup leverages `rocks.nvim`, a plugin manager that, as of now, requires features only present in these nightly builds of Neovim. For further details and to meet all necessary prerequisites, consult the documentation of `rocks.nvim`. Additionally, ensure you have `rocks.nvim` itself installed to fully benefit from the features in my configuration.
 
 ### Plugins
 
