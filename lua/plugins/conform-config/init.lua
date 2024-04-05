@@ -1,12 +1,13 @@
 require("conform").setup({
 	formatters_by_ft = {
-		lua = { "stylua" }, -- stylua for Lua formatting
-		python = { "isort", "black" }, -- 'black' for Python formatting
-		javascript = { "eslint_d", "eslint" },
-		typescript = { "eslint_d", "eslint" },
-		javascriptreact = { "eslint_d", "eslint" },
-		typescriptreact = { "eslint_d", "eslint" },
-		svelte = { "eslint_d", "eslint" },
+		sh = { "beautysh" },
+		lua = { "stylua" },
+		python = { "isort", "black" },
+		javascript = { "prettier", "eslint_d" },
+		typescript = { "prettier", "eslint_d" },
+		javascriptreact = { "prettier", "eslint_d" },
+		typescriptreact = { "prettier", "eslint_d" },
+		svelte = { "prettier", "eslint_d" },
 	},
 	format_on_save = {
 		async = false,

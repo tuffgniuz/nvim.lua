@@ -11,9 +11,6 @@ map("n", "ng", ":Neogit<CR>", {})
 map("n", "<leader>do", ":DiffviewOpen<CR>", {})
 map("n", "<leader>dc", ":DiffviewClose<CR>", {})
 map("n", "<leader>dt", ":DiffviewToggleFiles<CR>", {})
---> truezen <--
-map("n", "<leader>za", ":TZAtaraxis<CR>", {})
-map("n", "<leader>zm", ":TZMinimalist<CR>", {})
 --> nvim tree mappings <--
 map("n", "<leader>n", ":NvimTreeToggle<CR>", opts)
 map("n", "<leader>gn", ":NvimTreeFocus<CR>", opts)
