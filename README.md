@@ -31,3 +31,4 @@ To use my Neovim configuration, it is crucial to have the Neovim nightly version
 - [comment.nvim](https://github.com/numToStr/Comment.nvim)
 - [neorg](https://github.com/nvim-neorg/neorg)
 - [oil.nvim](https://github.com/stevearc/oil.nvim)
+- [leap.nvim](https://github.com/ggandor/leap.nvim)
