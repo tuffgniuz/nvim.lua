@@ -1,29 +1,6 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-	vim.fn.system({
-		"git",
-		"clone",
-		"--filter=blob:none",
-		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
-		lazypath,
-	})
-end
-vim.opt.rtp:prepend(lazypath)
+local plugins = require("plugins")
 
+require("bootstrap")
 require("keymaps")
 require("options")
-
-require("plugins.lazy")
-require("plugins.colorizer")
-require("plugins.tailwindcss-colorizer-cmp")
-require("plugins.oil")
-require("plugins.true-zen")
-require("plugins.dashboard")
-require("plugins.lspzero")
-require("plugins.conform")
-require("plugins.barbar")
-require("plugins.lualine")
-require("plugins.nvim-tree")
-require("plugins.telescope")
-require("plugins.treesitter")
+require("lazy").setup(plugins.plugins)
