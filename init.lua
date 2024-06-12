@@ -1,16 +1,25 @@
-require("plugins/rocks-config")
-require("plugins/lsp-zero-config")
-require("plugins/conform-config")
-require("plugins/treesitter-config")
-require("plugins/barbar-config")
-require("plugins/lualine-config")
-require("plugins/comment-nvim-config")
-require("plugins/telescope-config")
-require("plugins/nvim-tree-config")
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
 
-require("keymap-config")
+require("keymaps")
 require("options")
 
-require("oil").setup()
-require("nvim-autopairs").setup()
-require("neogit").setup()
+require("plugins.lazy")
+require("plugins.dashboard")
+require("plugins.lspzero")
+require("plugins.conform")
+require("plugins.barbar")
+require("plugins.lualine")
+require("plugins.nvim-tree")
+require("plugins.telescope")
+require("plugins.treesitter")

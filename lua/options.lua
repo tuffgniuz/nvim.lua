@@ -28,4 +28,4 @@ vim.opt.mouse = "a"
 
 vim.opt.fillchars = "eob: "
 
-vim.cmd("colorscheme nordfox")
+-- vim.cmd("colo nightfox")

@@ -7,8 +7,8 @@ require("nvim-treesitter.configs").setup({
 		"javascript",
 		"lua",
 		"typescript",
-    "python",
-    "go",
+		"python",
+		"go",
 	},
 	sync_install = false,
 	highlight = {
