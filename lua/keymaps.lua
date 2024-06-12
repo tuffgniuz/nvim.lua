@@ -3,6 +3,13 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " " -- leader key
 
+--> true-zen
+map("n", "<leader>zn", ":TZNarrow<CR>", {})
+map("v", "<leader>zn", ":'<,'>TZNarrow<CR>", {})
+map("n", "<leader>zf", ":TZFocus<CR>", {})
+map("n", "<leader>zm", ":TZMinimalist<CR>", {})
+map("n", "<leader>za", ":TZAtaraxis<CR>", {})
+
 --> oil
 map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 --> neogit <--

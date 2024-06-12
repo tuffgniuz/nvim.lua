@@ -5,6 +5,24 @@ local plugins = {
 		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	},
 	{
+		"roobert/tailwindcss-colorizer-cmp.nvim",
+	},
+	{ "NvChad/nvim-colorizer.lua" },
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = true,
+	},
+	{
+		"stevearc/oil.nvim",
+		opts = {},
+		-- Optional dependencies
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
+	{
+		"Pocco81/true-zen.nvim",
+	},
+	{
 		"NeogitOrg/neogit",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
