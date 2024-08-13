@@ -1,8 +1,8 @@
-local M = {}
-
-M.plugins = {
+return {
+	require("plugins.vimtex"),
 	require("plugins.autopairs"),
 	require("plugins.barbar"),
+	require("plugins.diffview"),
 	require("plugins.colorizer"),
 	require("plugins.comment"),
 	require("plugins.conform"),
@@ -19,5 +19,3 @@ M.plugins = {
 	require("plugins.neogit"),
 	require("plugins.lspzero"),
 }
-
-return M

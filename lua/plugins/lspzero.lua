@@ -1,10 +1,8 @@
 return {
 	-- Mason plugin to manage external editor tooling such as LSP servers
 	{ "williamboman/mason.nvim", config = true },
-
 	-- Extension to Mason to handle LSP configurations
 	{ "williamboman/mason-lspconfig.nvim", config = true },
-
 	-- LSP Zero plugin to simplify LSP setup
 	{
 		"VonHeikemen/lsp-zero.nvim",
@@ -14,7 +12,6 @@ return {
 			{ "neovim/nvim-lspconfig" },
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
-
 			-- Autocompletion
 			{ "hrsh7th/nvim-cmp" },
 			{ "hrsh7th/cmp-nvim-lsp" },
@@ -34,6 +31,13 @@ return {
 				handlers = {
 					lsp_zero.default_setup,
 				},
+			})
+
+			lsp_zero.set_sign_icons({
+				error = "✘",
+				warn = "▲",
+				hint = "⚑",
+				info = "»",
 			})
 		end,
 	},
