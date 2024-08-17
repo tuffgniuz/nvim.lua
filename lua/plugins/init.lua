@@ -9,6 +9,7 @@ return {
 	require("plugins.dashboard"),
 	require("plugins.everforest"),
 	require("plugins.lualine"),
+	require("plugins.neorg"),
 	require("plugins.neogit"),
 	require("plugins.nvim-tree"),
 	require("plugins.oil"),
