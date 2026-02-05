@@ -9,6 +9,13 @@ return {
 				["core.concealer"] = {
 					icon_preset = "varied",
 				},
+				["core.dirman"] = {
+					config = {
+						workspaces = {
+							notes = "~/Notes",
+						},
+					},
+				},
 			},
 		})
 	end,
