@@ -60,7 +60,7 @@ return {
 				sources = {
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
-					-- Add other sources if needed
+					{ name = "neorg" },
 				},
 				formatting = {
 					fields = { "abbr", "kind", "menu" },

@@ -4,6 +4,7 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " " -- set leader key
+vim.g.maplocalleader = ","
 
 map("n", "<leader>nh", ":nohlsearch<CR>", opts) -- clear search highlight
 map("n", "<leader>tw", ":set wrap!<CR>", opts) -- toggle line wrap
@@ -91,3 +92,6 @@ map("t", "<leader>tt", "<C-\\><C-n>:FloatermToggle<CR>", opts)
 map("t", "<C-h>", "<C-\\><C-n>:FloatermSidebarToggle<CR>", opts) -- switch to sidebar
 map("t", "<C-j>", "<C-\\><C-n>:FloatermPrev<CR>", opts) -- cycle to previous terminal
 map("t", "<C-k>", "<C-\\><C-n>:FloatermNext<CR>", opts) -- cycle to next terminal
+
+-- zen mode
+map("n", "<leader>z", ":Zen<CR>", opts)

@@ -18,7 +18,6 @@ return {
 	require("plugins.tailwindcss-colorizer-cmp"),
 	require("plugins.telescope"),
 	require("plugins.treesitter"),
-	require("plugins.true-zen"),
 	require("plugins.neogit"),
 	require("plugins.lspzero"),
 }

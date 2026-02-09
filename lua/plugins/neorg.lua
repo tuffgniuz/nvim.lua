@@ -6,14 +6,22 @@ return {
 		require("neorg").setup({
 			load = {
 				["core.defaults"] = {},
+				["core.completion"] = {
+					config = {
+						engine = "nvim-cmp",
+					},
+				},
 				["core.concealer"] = {
 					icon_preset = "varied",
 				},
 				["core.dirman"] = {
 					config = {
 						workspaces = {
-							notes = "~/Notes",
+							general = "~/neorg/general",
+							alignerr = "~/neorg/alignerr",
+							code = "~/neorg/code",
 						},
+						default_workspace = "general",
 					},
 				},
 			},
