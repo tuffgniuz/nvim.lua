@@ -13,7 +13,6 @@ return {
 	require("plugins.render-markdown"),
 	require("plugins.neorg"),
 	require("plugins.neogit"),
-	-- require("plugins.nvim-tree"),
 	require("plugins.oil"),
 	require("plugins.tailwindcss-colorizer-cmp"),
 	require("plugins.telescope"),

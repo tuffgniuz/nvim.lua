@@ -20,4 +20,3 @@ Key features include:
 -   **User Interface & Aesthetics**: A visually appealing setup with the `gruvbox-material` colorscheme, a functional statusline powered by `lualine.nvim`, and a welcoming dashboard using `dashboard-nvim`.
 -   **Text Editing Enhancements**: Smart autocompletion of pairs with `nvim-autopairs` and convenient commenting/uncommenting with `Comment.nvim`.
 -   **Specialized Workflows**: Dedicated support for LaTeX projects with `vimtex`, a powerful note-taking system using `neorg`, and GitHub integration with `octo.nvim`.
--   **Focus Mode**: A custom `Zen mode` plugin for distraction-free writing. 
