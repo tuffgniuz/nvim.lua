@@ -14,6 +14,7 @@ return {
 			},
 			defaults = {
 				file_ignore_patterns = { "node_modules" },
+				scrolling_strategy = "descending",
 			},
 		})
 	end,

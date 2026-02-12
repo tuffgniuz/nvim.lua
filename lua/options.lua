@@ -30,3 +30,5 @@ vim.opt.hidden = true                    -- Allow switching buffers without savi
 vim.opt.mouse = "a"                      -- Enable mouse support in all modes
 
 vim.opt.fillchars = "eob: "              -- Fill characters for end of buffer lines (empty lines after the end of the file)
+
+vim.opt.fillchars:append({ diff = "▸" })

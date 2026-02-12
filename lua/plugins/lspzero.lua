@@ -1,5 +1,3 @@
--- nvim/lua/plugins/lspzero.lua
-
 return {
 	-- Mason plugin to manage external editor tooling such as LSP servers
 	{ "williamboman/mason.nvim", config = true },
