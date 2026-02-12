@@ -1,5 +1,6 @@
 return {
 	"roobert/tailwindcss-colorizer-cmp.nvim",
+	ft = { "css", "html", "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
 	config = function()
 		require("cmp").config.formatting = {
 			format = require("tailwindcss-colorizer-cmp").formatter,

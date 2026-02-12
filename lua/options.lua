@@ -6,7 +6,7 @@ vim.opt.smarttab = true                  -- Insert the correct number of spaces 
 vim.opt.shiftwidth = 2                   -- Number of spaces to use for each step of (auto)indent
 vim.opt.tabstop = 2                      -- Number of spaces that a <Tab> in the file counts for
 
-vim.opt.hlsearch = false                 -- Disable highlight on search results
+vim.opt.hlsearch = true                  -- Enable highlight on search results
 vim.opt.incsearch = true                 -- Show search matches as you type
 vim.opt.ignorecase = true                -- Ignore case in search patterns
 vim.opt.smartcase = true                 -- Override 'ignorecase' if the search pattern contains uppercase letters
