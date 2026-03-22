@@ -16,7 +16,7 @@ return {
 				typescriptreact = { "prettier", "eslint_d" },
 			},
 			format_on_save = {
-				async = true,
+				async = false,
 				timeout_ms = 500,
 				lsp_fallback = true,
 			},
@@ -25,7 +25,7 @@ return {
 		-- Key mapping for manual formatting
 		vim.keymap.set({ "n", "v" }, "mp", function()
 			conform.format({
-				lsp_fallback = true,
+				lsp_fallback = false,
 				async = true,
 				timeout_ms = 500,
 			})

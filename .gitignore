@@ -2,4 +2,6 @@ plugin
 
 .init.vim
 .luarc.json
+.nvimlog
 lua/sniprun-config/init.lua
+

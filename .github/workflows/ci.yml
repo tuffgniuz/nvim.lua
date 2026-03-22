@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  nvim-smoke:
+    runs-on: ubuntu-latest
+
+    env:
+      XDG_CONFIG_HOME: ${{ runner.temp }}/xdg-config
+      XDG_DATA_HOME: ${{ runner.temp }}/xdg-data
+      XDG_STATE_HOME: ${{ runner.temp }}/xdg-state
+      XDG_CACHE_HOME: ${{ runner.temp }}/xdg-cache
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Neovim and Lua tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lua5.1 git curl ripgrep fd-find build-essential
+          sudo ln -sf /usr/bin/fdfind /usr/local/bin/fd
+
+      - name: Install current Neovim release
+        run: |
+          curl -fsSL -o /tmp/nvim-linux-x86_64.tar.gz https://github.com/neovim/neovim-releases/releases/download/stable/nvim-linux-x86_64.tar.gz
+          tar -C /tmp -xzf /tmp/nvim-linux-x86_64.tar.gz
+          sudo rm -rf /opt/nvim
+          sudo mv /tmp/nvim-linux-x86_64 /opt/nvim
+          sudo ln -sf /opt/nvim/bin/nvim /usr/local/bin/nvim
+
+      - name: Mount repo as Neovim config
+        run: |
+          mkdir -p "$XDG_CONFIG_HOME"
+          ln -s "$GITHUB_WORKSPACE" "$XDG_CONFIG_HOME/nvim"
+
+      - name: Check Lua syntax
+        run: |
+          find "$GITHUB_WORKSPACE" -type f -name '*.lua' -print0 | xargs -0 -n1 luac5.1 -p
+
+      - name: Restore locked plugins
+        run: |
+          nvim --headless "+Lazy! restore" "+qa"
+
+      - name: Smoke test startup
+        run: |
+          nvim --headless "+qa"
+
+      - name: Smoke test lazy stats
+        run: |
+          nvim --headless "+lua require('lazy').stats()" "+qa"

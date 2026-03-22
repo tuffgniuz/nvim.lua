@@ -17,11 +17,13 @@ return {
 				["core.dirman"] = {
 					config = {
 						workspaces = {
-							general = "~/neorg/general",
-							alignerr = "~/neorg/alignerr",
-							code = "~/neorg/code",
+							general = "~/docs/neorg/general",
+							jw = "~/docs/neorg/jw",
+							alignerr = "~/docs/neorg/alignerr",
+							outlier = "~/docs/neorg/outlier",
+							code = "~/docs/neorg/code",
 						},
-						default_workspace = "general",
+						default_workspace = "alignerr",
 					},
 				},
 			},

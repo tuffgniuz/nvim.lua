@@ -36,6 +36,10 @@ map("n", "<leader>qq", ":q!<CR>", { noremap = true, silent = true, desc = "Force
 -- oil
 map("n", "-", "<CMD>Oil<CR>", { noremap = true, silent = true, desc = "Open parent directory" })
 
+-- Neorg
+map("n", "<leader>ni", ":Neorg index<CR>", { noremap = true, silent = true, desc = "Return" })
+map("n", "<leader>nr", ":Neorg return<CR>", { noremap = true, silent = true, desc = "Neorg: Return to previous" })
+
 -- neogit
 map("n", "ng", ":Neogit<CR>", { noremap = true, silent = true, desc = "Toggle Neogit" })
 
@@ -47,11 +51,30 @@ map("n", "<leader>dt", ":DiffviewToggleFiles<CR>", { noremap = true, silent = tr
 -- telescope
 map("n", "<leader>fd", ":Telescope diagnostics<cr>", { noremap = true, silent = true, desc = "Telescope Diagnostics" })
 map("n", "<leader>ff", ":Telescope find_files<cr>", { noremap = true, silent = true, desc = "Telescope Find Files" })
+map("n", "<leader>fD", ":Telescope lsp_definitions<cr>", { noremap = true, silent = true, desc = "Telescope LSP Definitions" })
+map(
+	"n",
+	"<leader>fi",
+	":Telescope lsp_implementations<cr>",
+	{ noremap = true, silent = true, desc = "Telescope LSP Implementations" }
+)
 map(
 	"n",
 	"<leader>fr",
 	":Telescope lsp_references<cr>",
 	{ noremap = true, silent = true, desc = "Telescope LSP References" }
+)
+map(
+	"n",
+	"<leader>fs",
+	":Telescope lsp_document_symbols<cr>",
+	{ noremap = true, silent = true, desc = "Telescope Document Symbols" }
+)
+map(
+	"n",
+	"<leader>fS",
+	":Telescope lsp_workspace_symbols<cr>",
+	{ noremap = true, silent = true, desc = "Telescope Workspace Symbols" }
 )
 map(
 	"n",
@@ -62,6 +85,14 @@ map(
 
 map("n", "<leader>fg", ":Telescope live_grep<cr>", { noremap = true, silent = true, desc = "Telescope Live Grep" })
 map("n", "<leader>fb", ":Telescope buffers<cr>", { noremap = true, silent = true, desc = "Telescope Buffers" })
-
--- zen mode
-map("n", "<leader>zm", ":Zen<CR>", opts)
+map("n", "<leader>xx", ":Trouble diagnostics toggle<cr>", { noremap = true, silent = true, desc = "Trouble Diagnostics" })
+map(
+	"n",
+	"<leader>xX",
+	":Trouble diagnostics toggle filter.buf=0<cr>",
+	{ noremap = true, silent = true, desc = "Trouble Buffer Diagnostics" }
+)
+map("n", "<leader>cs", ":AerialToggle!<cr>", { noremap = true, silent = true, desc = "Toggle Symbols Outline" })
+map("n", "<leader>uh", function()
+	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = 0 }), { bufnr = 0 })
+end, { noremap = true, silent = true, desc = "Toggle Inlay Hints" })
