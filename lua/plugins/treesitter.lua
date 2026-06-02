@@ -13,6 +13,8 @@ return {
 				"typescript",
 				"python",
 				"go",
+				"norg",
+				"norg_meta",
 			},
 			sync_install = false,
 			highlight = {
