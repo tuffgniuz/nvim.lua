@@ -32,7 +32,7 @@ return {
 			require("mason").setup()
 
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "pyright", "cssls", "rust_analyzer" },
+				ensure_installed = { "lua_ls", "pyright", "cssls", "rust_analyzer", "svelte", "emmet_ls", "ts_ls" },
 				automatic_enable = {
 					exclude = { "rust_analyzer" },
 				},

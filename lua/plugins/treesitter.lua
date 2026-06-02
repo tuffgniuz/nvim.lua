@@ -13,8 +13,13 @@ return {
 				"typescript",
 				"python",
 				"go",
+				"html",
+				"svelte",
+				"json",
+				"markdown",
 				"norg",
 				"norg_meta",
+				"vimdoc",
 			},
 			sync_install = false,
 			highlight = {
