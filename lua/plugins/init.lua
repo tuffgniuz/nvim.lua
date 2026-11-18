@@ -20,6 +20,7 @@ return {
 	require("plugins.lualine"),
 	require("plugins.render-markdown"),
 	require("plugins.neorg"),
+	require("plugins.notion"),
 	require("plugins.neogit"),
 	require("plugins.oil"),
 	require("plugins.tailwindcss-colorizer-cmp"),

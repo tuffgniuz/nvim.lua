@@ -1,5 +1,6 @@
 plugin
 
+.codex
 .init.vim
 .luarc.json
 .nvimlog

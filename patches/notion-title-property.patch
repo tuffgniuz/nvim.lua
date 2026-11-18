@@ -1,0 +1,92 @@
+diff --git a/lua/notion/api.lua b/lua/notion/api.lua
+index bcb2e9b..c0b0838 100644
+--- a/lua/notion/api.lua
++++ b/lua/notion/api.lua
+@@ -21,6 +21,18 @@ local M = {}
+ local config = require('notion.config')
+ local curl = require('plenary.curl')
+ 
++local function get_page_title(page)
++  local property_name = config.get('title_property') or 'Name'
++  local property = page and page.properties and page.properties[property_name]
++  local title = property and property.title
++
++  if not title or #title == 0 then
++    return 'Untitled'
++  end
++
++  return title[1].plain_text or (title[1].text and title[1].text.content) or 'Untitled'
++end
++
+ -- Track ongoing syncs to prevent duplicates and implement debouncing
+ local sync_state = {}
+ 
+@@ -481,10 +493,7 @@ function M.get_all_pages(database_id, page_size)
+ 
+     if result and result.results then
+       for _, page in ipairs(result.results) do
+-        local title = 'Untitled'
+-        if page.properties.Name and page.properties.Name.title and #page.properties.Name.title > 0 then
+-          title = page.properties.Name.title[1].text.content
+-        end
++        local title = get_page_title(page)
+         table.insert(all_pages, {
+           id = page.id,
+           title = title,
+@@ -535,7 +544,7 @@ local function create_page_impl(title)
+       database_id = database_id
+     },
+     properties = {
+-      Name = {
++      [config.get('title_property') or 'Name'] = {
+         title = {
+           {
+             text = {
+@@ -594,10 +603,7 @@ local function list_pages_impl()
+   if result and result.results then
+     local pages = {}
+     for _, page in ipairs(result.results) do
+-      local title = 'Untitled'
+-      if page.properties.Name and page.properties.Name.title and #page.properties.Name.title > 0 then
+-        title = page.properties.Name.title[1].text.content
+-      end
++      local title = get_page_title(page)
+       table.insert(pages, {
+         id = page.id,
+         title = title,
+@@ -722,10 +728,7 @@ local function delete_page_impl()
+   if result and result.results then
+     local pages = {}
+     for _, page in ipairs(result.results) do
+-      local title = 'Untitled'
+-      if page.properties.Name and page.properties.Name.title and #page.properties.Name.title > 0 then
+-        title = page.properties.Name.title[1].text.content
+-      end
++      local title = get_page_title(page)
+       table.insert(pages, {
+         id = page.id,
+         title = title,
+@@ -1070,10 +1073,7 @@ local function edit_page_impl(page_id)
+   end
+ 
+   -- Get page title
+-  local title = 'Untitled'
+-  if page_result.properties.Name and page_result.properties.Name.title and #page_result.properties.Name.title > 0 then
+-    title = page_result.properties.Name.title[1].text.content
+-  end
++  local title = get_page_title(page_result)
+ 
+   -- Get page content blocks
+   local all_blocks = M.get_all_blocks(page_id)
+diff --git a/lua/notion/config.lua b/lua/notion/config.lua
+index 867f784..d3d414a 100644
+--- a/lua/notion/config.lua
++++ b/lua/notion/config.lua
+@@ -3,6 +3,7 @@ local M = {}
+ M.defaults = {
+   notion_token_cmd = nil, -- Command to retrieve token, e.g. {"doppler", "secrets", "get", "--plain", "NOTION_TOKEN"}
+   database_id = nil,
++  title_property = 'Name',
+   page_size = 100,
+   cache_ttl = 300,
+   debug = false, -- Set to true to show timing information

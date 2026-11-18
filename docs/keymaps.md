@@ -88,6 +88,7 @@ This document lists the keymaps configured in this Neovim setup.
 | `n` | `go` | Jump to type definition | LSP buffer | `lsp-zero.default_keymaps()` |
 | `n` | `gr` | List references | LSP buffer | `lsp-zero.default_keymaps()` |
 | `n` | `gs` | Signature help | LSP buffer | `lsp-zero.default_keymaps()` |
+| `n` | `<leader>rn` | Rename symbol | LSP buffer | `lua/plugins/lspzero.lua` |
 | `n` | `<F2>` | Rename symbol | LSP buffer | `lsp-zero.default_keymaps()` |
 | `n` | `<F3>` | Format current buffer with LSP | LSP buffer | `lsp-zero.default_keymaps()` |
 | `n` | `<F4>` | Code actions at cursor | LSP buffer | `lsp-zero.default_keymaps()` |
